@@ -62,9 +62,15 @@
     @include respond(bp_largest) {
       margin-right: 0rem;
     }
+    @include respond(bp_medium) {
+      margin-right: 0rem;
+    }
   }
   &__item:not(:last-child) {
     margin-right: 2.5rem;
+    @include respond(bp_medium) {
+      margin-right: 0rem;
+    }
   }
 
   &__link {
