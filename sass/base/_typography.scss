@@ -1,0 +1,23 @@
+h1 {
+  font-size: 5rem;
+
+  @include respond(bp_large) {
+    font-size: 7.2rem;
+  }
+  @include respond(bp_small) {
+    font-size: 4rem;
+  }
+
+  @include respond(bp_smallest) {
+    font-size: 3rem;
+  }
+}
+
+h2 {
+  font-size: 3.6rem;
+  margin-bottom: 5rem;
+  @include respond(bp_medium) {
+    font-size: 3rem;
+    margin-bottom: 5rem;
+  }
+}

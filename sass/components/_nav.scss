@@ -1,0 +1,94 @@
+.nav {
+  position: absolute;
+  top: 5.5rem;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  color: $main-color-1;
+  text-transform: uppercase;
+  @include respond(bp_medium) {
+    top: 3.5rem;
+  }
+  &__collapse {
+    @include respond(bp_medium) {
+      display: none;
+    }
+  }
+  &__collapse.active {
+    display: block;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    right: 0;
+    height: 100vh;
+    top: 7rem;
+    background-color: $main-color-1;
+    border-top: solid 1px $main-color-3;
+
+    .nav__list {
+      flex-direction: column;
+      align-items: center;
+      margin-top: 3rem;
+
+      li {
+        margin-bottom: 3rem;
+      }
+      a {
+        color: $main-color-2;
+      }
+    }
+  }
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__brand {
+    display: flex;
+    align-items: center;
+    font-size: 1.8rem;
+    img {
+      margin-right: 1rem;
+      margin-left: 2rem;
+      @include respond(bp_large) {
+        margin-left: 0rem;
+      }
+    }
+  }
+  &__list {
+    list-style: none;
+    display: flex;
+    margin-right: 2.5rem;
+    @include respond(bp_largest) {
+      margin-right: 0rem;
+    }
+  }
+  &__item:not(:last-child) {
+    margin-right: 2.5rem;
+  }
+
+  &__link {
+    color: $main-color-1;
+    text-decoration: none;
+    font-size: 1.4rem;
+    padding: 1rem 0;
+  }
+  &__link--active {
+    font-weight: bold;
+  }
+  &__humburger {
+    display: none;
+    border: none;
+    outline: none;
+    background: none;
+    margin-right: 6rem;
+    cursor: pointer;
+
+    @include respond(bp_medium) {
+      display: block;
+    }
+    @include respond(bp_small) {
+      margin-right: 3rem;
+    }
+  }
+}

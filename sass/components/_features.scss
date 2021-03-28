@@ -1,0 +1,50 @@
+.features {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 15rem;
+  padding: 0 2rem;
+  @include respond(bp_large) {
+    padding: 0;
+  }
+
+  &__box {
+    position: relative;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    &:not(:last-child) {
+      margin-bottom: 12rem;
+    }
+    @include respond(bp_large) {
+      margin-bottom: 0 !important;
+    }
+  }
+  &__description {
+    width: 29.3rem;
+    height: 19.8rem;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    padding: 2rem 3.2rem;
+    transform: translate(-50%);
+    background-color: $main-color-1;
+    box-shadow: 0rem 0.5rem 3rem 0rem $shadow-color;
+    border-radius: 0.8rem;
+    text-align: center;
+  }
+  &__heading {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+  }
+  &__text {
+    font-size: 1.2rem;
+    line-height: 150%;
+    margin-bottom: 3rem;
+  }
+  &__button {
+    background: none;
+    color: $button-text-color;
+  }
+}

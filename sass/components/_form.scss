@@ -1,0 +1,76 @@
+.form {
+  &__input {
+    margin-bottom: 1.3rem;
+    input,
+    select {
+      border: none;
+      font-size: 1.6rem;
+      border: solid 1px $border-input-color;
+      border-radius: 0.6rem;
+      padding: 1.5rem 2rem;
+
+      width: 100%;
+    }
+    input:focus,
+    select:focus {
+      outline: none;
+    }
+
+    small {
+      visibility: hidden;
+      color: #e74c3c;
+      font-size: $description-font-size;
+    }
+  }
+  &__input--error {
+    small {
+      visibility: visible;
+    }
+  }
+  &__input-group {
+    display: flex;
+    .form__input {
+      flex-basis: 50%;
+    }
+    :first-child {
+      margin-right: 2rem;
+      @include respond(bp_small) {
+        margin-right: 0rem;
+      }
+    }
+    input {
+      width: 100%;
+    }
+    @include respond(bp_small) {
+      flex-direction: column;
+    }
+  }
+  &__button {
+    background: none;
+    font-size: $description-font-size;
+    width: 16rem;
+    height: 5rem;
+    background-color: $bg-color-dark;
+    color: $main-color-1;
+    border-radius: 0.6rem;
+    text-transform: uppercase;
+  }
+  &__submit {
+    text-align: center;
+    @include respond(bp_large) {
+      text-align: left;
+    }
+  }
+}
+
+select {
+  color: rgba($color: #132743, $alpha: 0.5);
+  border: none;
+}
+select option {
+  color: rgba($color: #132743, $alpha: 1);
+}
+
+::placeholder {
+  color: rgba($color: #132743, $alpha: 0.5);
+}

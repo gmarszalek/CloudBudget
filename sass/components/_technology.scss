@@ -1,0 +1,40 @@
+.technology {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+
+  &__box {
+    position: relative;
+    width: 25.5rem;
+    height: 22.6rem;
+    text-align: center;
+    padding: 3rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  &__bg-number {
+    position: absolute;
+    top: -1rem;
+    left: 50%;
+    transform: translate(-50%);
+    font-size: 10rem;
+    line-height: 1;
+    color: rgba(16, 16, 16, 0.08);
+    font-weight: bold;
+  }
+  &__heading {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  &__description {
+    font-size: 1.2rem;
+  }
+  &__icon {
+    margin-bottom: 1rem;
+  }
+}

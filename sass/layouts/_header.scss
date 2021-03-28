@@ -1,0 +1,58 @@
+.header {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(to right, rgba(213, 32, 71, 0.8), rgba(238, 61, 27, 0.8)),
+    url(../assets/Rectangle3@2x.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: $main-color-1;
+
+  @include respond(bp_medium) {
+    background-image: linear-gradient(to right, rgba(213, 32, 71, 0.8), rgba(238, 61, 27, 0.8)),
+      url(../assets/Rectangle3.jpg);
+  }
+
+  &__content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &__title {
+    margin-bottom: 5rem;
+    letter-spacing: 1rem;
+    text-transform: uppercase;
+    line-height: 1;
+    @include respond(bp_medium) {
+      margin-bottom: 3rem;
+      letter-spacing: 0.5rem;
+    }
+  }
+  &__description {
+    font-size: 2.4rem;
+    line-height: 150%;
+    max-width: 54rem;
+    margin: 0 auto 5rem auto;
+    @include respond(bp_medium) {
+      font-size: 2rem;
+      margin-bottom: 3rem;
+    }
+    @include respond(bp_small) {
+      font-size: 1.6rem;
+    }
+  }
+  &__button {
+    background-color: $main-color-1;
+    color: $button-text-color;
+    text-transform: uppercase;
+    box-shadow: 0rem 0.4rem 0.4rem 0rem $shadow-color;
+    font-size: 1.4rem;
+    width: 16rem;
+    height: 5rem;
+    padding: 1rem 2rem;
+    border-radius: 0.6rem;
+  }
+}
